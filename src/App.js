@@ -10,12 +10,12 @@ export default function App() {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleSubmit = () => {
-    if (name && email) {
+    if (name && email) { //
       setSubmitted(true);
-      setMessage(`Thank you, ${name}! We'll contact you at ${email}`);
+      setMessage(`Thank you, ${name}! We'll contact you at ${email}`); //
     }
   };
-
+//
   const resetForm = () => {
     setName('');
     setEmail('');
@@ -23,16 +23,16 @@ export default function App() {
     setSubmitted(false);
     setSelectedOption('');
   };
-
+//
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb', padding: '32px 16px' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <header style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <h1 style={{ fontSize: '36px', fontWeight: 'bold', color: '#2563eb', marginBottom: '8px' }} data-cy="main-heading">
-            Cypress Test Sample Page
+    <div style={{  minHeight: '100vh', backgroundColor: '#f9fafb', padding: '32px 16px' }}>
+      <div style={{  maxWidth: '1200px', margin: '0 auto' }}>
+        <header style={{  textAlign: 'center', marginBottom: '32px' }}>
+          <h1 style={{  fontSize: '36px', fontWeight: 'bold', color: '#2563eb', marginBottom: '8px' }} data-cy="main-heading">
+             Cypress Test Sample Page
           </h1>
-          <p style={{ color: '#6b7280', fontSize: '16px' }} data-cy="subtitle">
-            A demo page with various elements for testing
+          <p style={{  color: '#6b7280', fontSize: '16px' }} data-cy="subtitle">
+             A demo page with various elements for testing
           </p>
         </header>
 
@@ -54,8 +54,8 @@ export default function App() {
                     id="name"
                     data-cy="name-input"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={{ width: '100%', padding: '8px 12px', border: '1px solid #d1d5db', borderRadius: '6px', fontSize: '14px', boxSizing: 'border-box' }}
+                    onChange={(e) =>  setName(e.target.value)}
+                    style={{ width: '100%',  padding: '8px 12px', border: '1px solid #d1d5db', borderRadius: '6px', fontSize: '14px', boxSizing: 'border-box' }}
                     placeholder="Enter your name"
                   />
                 </div>
@@ -84,9 +84,9 @@ export default function App() {
                     data-cy="option-select"
                     value={selectedOption}
                     onChange={(e) => setSelectedOption(e.target.value)}
-                    style={{ width: '100%', padding: '8px 12px', border: '1px solid #d1d5db', borderRadius: '6px', fontSize: '14px', boxSizing: 'border-box' }}
+                    style={{ width: '100%',  padding: '8px 12px', border: '1px solid #d1d5db', borderRadius: '6px', fontSize: '14px', boxSizing: 'border-box' }}
                   >
-                    <option value="">Choose an option</option>
+                    <option value=""> Choose an option</option>
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
                     <option value="option3">Option 3</option>
@@ -96,20 +96,20 @@ export default function App() {
                 <button
                   onClick={handleSubmit}
                   data-cy="submit-button"
-                  style={{ width: '100%', backgroundColor: '#2563eb', color: 'white', padding: '10px 16px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '14px', fontWeight: '500' }}
+                  style={{ width: '100%',  backgroundColor: '#2563eb', color: 'white', padding: '10px 16px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '14px', fontWeight: '500' }}
                 >
                   Submit
                 </button>
               </div>
             ) : (
               <div data-cy="success-message">
-                <div style={{ backgroundColor: '#dcfce7', border: '1px solid #86efac', color: '#166534', padding: '12px 16px', borderRadius: '6px', marginBottom: '16px' }}>
+                <div style={{ backgroundColor: '#dcfce7',  border: '1px solid #86efac', color: '#166534', padding: '12px 16px', borderRadius: '6px', marginBottom: '16px' }}>
                   {message}
                 </div>
                 <button
                   onClick={resetForm}
                   data-cy="reset-button"
-                  style={{ width: '100%', backgroundColor: '#6b7280', color: 'white', padding: '10px 16px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '14px', fontWeight: '500' }}
+                  style={{ width: '100%',  backgroundColor: '#6b7280', color: 'white', padding: '10px 16px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '14px', fontWeight: '500' }}
                 >
                   Reset Form
                 </button>
@@ -119,8 +119,8 @@ export default function App() {
 
           {/* Interactive Elements */}
           <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
-            <h2 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '16px' }} data-cy="interactive-title">
-              Interactive Elements
+            <h2 style={{ fontSize: '24px',  fontWeight: '600', marginBottom: '16px' }} data-cy="interactive-title">
+               Interactive Elements
             </h2>
 
             <div style={{ marginBottom: '24px' }}>
@@ -133,7 +133,7 @@ export default function App() {
                 >
                   -
                 </button>
-                <span style={{ fontSize: '24px', fontWeight: 'bold', minWidth: '40px', textAlign: 'center' }} data-cy="counter-value">
+                <span style={{ fontSize: '24px',  fontWeight: 'bold', minWidth: '40px', textAlign: 'center' }} data-cy="counter-value">
                   {count}
                 </span>
                 <button
@@ -158,7 +158,7 @@ export default function App() {
               {isVisible && (
                 <div
                   data-cy="toggleable-content"
-                  style={{ backgroundColor: '#f3e8ff', padding: '16px', borderRadius: '6px', color: '#581c87' }}
+                  style={{ backgroundColor: '#f3e8ff',  padding: '16px', borderRadius: '6px', color: '#581c87' }}
                 >
                   This content can be toggled on and off!
                 </div>
